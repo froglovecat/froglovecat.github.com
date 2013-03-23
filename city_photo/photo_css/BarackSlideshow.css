@@ -1,0 +1,48 @@
+#slideshow * {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#slideshow {
+	POSITION: relative; PADDING-BOTTOM: 15px; PADDING-LEFT: 0px; WIDTH: 603px; PADDING-RIGHT: 0px; BACKGROUND: url(images/bg_shadow.gif) no-repeat 50% top; HEIGHT: 306px; PADDING-TOP: 14px
+}
+#slideshow #menu {
+	POSITION: absolute
+}
+#slideshow #pictures {
+	POSITION: absolute
+}
+#slideshow #loading {
+	POSITION: absolute
+}
+#slideshow #loading {
+	Z-INDEX: 5; TEXT-INDENT: -5000px; WIDTH: 24px; DISPLAY: block; BACKGROUND: url(images/spinner.gif); HEIGHT: 24px; VISIBILITY: hidden; TOP: 158px; LEFT: 205px
+}
+#slideshow #pictures {
+	WIDTH: 437px; BACKGROUND: url(images/bg.jpg); HEIGHT: 277px; OVERFLOW: hidden; LEFT: 0px
+}
+#slideshow #pictures LI {
+	POSITION: absolute; WIDTH: 437px; DISPLAY: block; TOP: 0px
+}
+#slideshow #pictures LI IMG {
+	POSITION: relative; BOTTOM: 0px; DISPLAY: block
+}
+#slideshow #menu {
+	LIST-STYLE-TYPE: none; WIDTH: 166px; BACKGROUND: url(images/bg_side.jpg); HEIGHT: 257px; RIGHT: 0px; PADDING-TOP: 20px
+}
+#slideshow #menu LI {
+	Z-INDEX: 1000; POSITION: relative; ZOOM: 1; DISPLAY: block
+}
+#slideshow #menu LI A {
+	Z-INDEX: 1000; PADDING-BOTTOM: 7px; PADDING-LEFT: 28px; PADDING-RIGHT: 0px; ZOOM: 1; DISPLAY: block; FONT: 11px/14px "Lucida Grande", "Verdana"; COLOR: #ccc; VERTICAL-ALIGN: middle; TEXT-DECORATION: none; PADDING-TOP: 7px
+}
+#slideshow #menu LI A:focus {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: 0px
+}
+#slideshow #menu LI A:hover {
+	COLOR: #fff
+}
+#slideshow #menu LI.current A {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 28px; PADDING-RIGHT: 0px; FONT: 15px/18px "Georgia"; COLOR: #fff; PADDING-TOP: 5px
+}
+#slideshow #menu LI.background {
+	Z-INDEX: 5; POSITION: absolute; WIDTH: 4px; BACKGROUND: url(images/arrow.gif) no-repeat left center; HEIGHT: 7px; FONT-SIZE: 1px
+}
