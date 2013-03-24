@@ -22,9 +22,15 @@ div,td{ word-wrap: break-word;}
 
 
 /*planetTravel*/ 
-.planetTravelBg_1{ background:url(../images/lift_bg_1.jpg) #000 center top fixed no-repeat}
-.planetTravelBg_2{ background:url(../images/lift_bg_2.jpg) #000 center top fixed no-repeat}
-.planetTravelBg_3{ background:url(../images/lift_bg_3.jpg) #000 center top fixed no-repeat}
+.planetTravelBg_1{ background:url(../images/1.jpg) #000 center top fixed no-repeat}
+.planetTravelBg_2{ background:url(../images/2.jpg) #000 center top fixed no-repeat}
+.planetTravelBg_3{ background:url(../images/3.jpg) #000 center top fixed no-repeat}
+.planetTravelBg_4{ background:url(../images/4.jpg) #000 center top fixed no-repeat}
+.planetTravelBg_5{ background:url(../images/5.jpg) #000 center top fixed no-repeat}
+.planetTravelBg_6{ background:url(../images/6.jpg) #000 center top fixed no-repeat}
+.planetTravelBg_7{ background:url(../images/7.jpg) #000 center top fixed no-repeat}
+.planetTravelBg_8{ background:url(../images/8.jpg) #000 center top fixed no-repeat}
+.planetTravelBg_9{ background:url(../images/9.jpg) #000 center top fixed no-repeat}
 
 .planetTravelFly{  position:fixed; _position:absolute; width:1px; height:1px; z-index:0; }
 .planetTravelFlash{ position:fixed; _position:absolute; z-index:0; }

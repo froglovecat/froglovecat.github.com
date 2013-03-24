@@ -103,7 +103,7 @@
 		}
 	};
 	$.fn.planetTravel.defaults = {
-		bgCss				: ['planetTravelBg_1' ,'planetTravelBg_2' ,'planetTravelBg_3' ],
+		bgCss				: ['planetTravelBg_1' ,'planetTravelBg_2' ,'planetTravelBg_3' ,'planetTravelBg_4'  ,'planetTravelBg_5' ,'planetTravelBg_6' ,'planetTravelBg_7'  ,'planetTravelBg_8' ,'planetTravelBg_9'],
 		flyStarImage		: [ ['images/star-fly-1.png' , 23 ,23 ] ],/*星星图片地址.地址，宽度，高度*/	
 		flyStartBright	 	: Array( 0.6 , 1 ) ,  /*star 亮度范围*/ 
 		flyDuration			: 15000 , /*星星飞行的时间,单位 ms 。（决定星星飞行速度的快慢）*/
