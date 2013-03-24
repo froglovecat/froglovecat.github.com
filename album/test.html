@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Frog Love Cat</title>
+
+<meta name="Copyright" content="julying.com" />
+<meta name="Designer" content="julying.com" />
+
+<link href="images/main.css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/jquery.clouds.albums.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#listSingle li , #listBig li,#listSmall li').synchroMove({speed:'slow',complete:completeDo}) ;
+});
+</script>
+
+<script type="text/javascript" src="highslide/highslide.js"></script>
+<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
+<script type="text/javascript">
+hs.graphicsDir = 'highslide/graphics/';
+hs.wrapperClassName = 'wide-border';
+hs.fadeInOut = true;
+function completeDo(){
+	$('#listSingle a , #listBig a,#listSmall a').click(function(){
+		hs.expand(this);
+		return false;
+	});
+};
+
+</script>
+
+</head>
+<body>
+<div class="hide"><div class="example"></div><div class="code"></div></div>
+
+<div class="pos">
+
+	<div class="contents">
+    	<h1 class="png">我们的相册</h1>
+        <div class="content">
+            
+            <div id="listBig" class="listImg listBig">
+                <h2><span class="png">GJQ & CSY</span></h2>                
+                <ul>
+                <li><a href="photo/2.jpg"><img src="photo/2.jpg" /></a></li>
+                <li><a href="photo/1.jpg"><img src="photo/1.jpg" /></a></li>
+                <li><a href="photo/3.jpg"><img src="photo/3.jpg" /></a></li>
+                <li><a href="photo/4.jpg"><img src="photo/4.jpg" /></a></li> 
+                <li><a href="photo/5.jpg"><img src="photo/5.jpg" /></a></li>
+                <li><a href="photo/8.jpg"><img src="photo/8.jpg" /></a></li>
+                <li><a href="photo/7.jpg"><img src="photo/7.jpg" /></a></li> 
+                <li><a href="photo/6.jpg"><img src="photo/6.jpg" /></a></li>
+                <li><a href="photo/9.jpg"><img src="photo/9.jpg" /></a></li>
+                <div class="clear"></div>
+                </ul>
+                
+            </div><!-- .listBig-->
+            
+            <div class="bottom">
+            	<div class="copyRight">
+                	<p>Copyright &copy; 2006 - <?php echo date('Y',time());?> <a href="http://Julying.Com" target="_blank">Julying.Com</a></p>
+                </div>
+                <h6 class="png"></h6>
+            </div><!-- .bottom -->
+        </div><!-- .content -->
+    </div><!-- .contents -->
+	
+    <div class="clear"></div>
+</div>
+
+<noscript>请允许脚本</noscript>
+
+<!--[if IE 6]><script src="jslib/DD_belatedPNG.js"></script><script>DD_belatedPNG.fix('.png');</script><![endif]-->
+<div style="display:none"><script src='http://pw.cnzz.com/c.php?id=80685900&l=2' language='JavaScript' charset='gb2312'></script></div>
+
+</body>
+</html>
