@@ -1,182 +1,100 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-	<meta charset="utf-8">	
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Flying Text</title>
+<script src="js/jquery-1.js" language="javascript"></script>
 
-	<title>与君初相识，犹似故人归</title>
-	
-  <!-- Demo CSS -->
-	<link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<script>
+$(document).ready(function(){
+		$('.container .flying-text').css({opacity:0});
+		$('.container .active-text').animate({opacity:1, marginLeft: "350px"}, 4000);
 
-	<link rel="stylesheet" type="text/css" href="cssalbum/demo.css" />
-  <link rel="stylesheet" type="text/css" href="cssalbum/style.css" />
+		var int = setInterval(changeText, 5000);
+		
+		function changeText(){
+			
+			var $activeText = $(".container .active-text");	
+			
+			var $nextText = $activeText.next(); 
+			if($activeText.next().length == 0) $nextText = $('.container .flying-text:first');
+			
+			$activeText.animate({opacity:0}, 1000);
+			$activeText.animate({marginLeft: "-100px"});
 				
-	<!-- Modernizr -->
-  <script src="js/modernizr.js"></script>
-	<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+			$nextText.css({opacity: 0}).addClass('active-text').animate({opacity:1, marginLeft: "350px"}, 4000, function(){
+				
+				$activeText.removeClass('active-text');											  
+			});
+		}
+});
+
+setTimeout(function () {
+   window.location.href= 'http://froglovecat.com/album/new/index.html';
+},60000);
+</script>
+
+<style>
+
+.container{
+width:500px;
+margin:0 auto;
+overflow:hidden;
+}
+
+.flying-text{
+margin-left:-100px;
+}
+
+</style>
+
 </head>
 
 <body>
-	<div class="container">
-		<section id="dg-container" class="dg-container">
-				<div class="dg-wrapper">
-						<a href="#"><img id="img1" src="photos/set_1/1.jpg" alt="image01"><div id="desp1">pic-1</div></a>
-						<a href="#"><img id="img2" src="photos/set_1/2.jpg" alt="image02"><div id="desp2">pic-2</div></a>
-						<a href="#"><img id="img3" src="photos/set_1/3.jpg" alt="image03"><div id="desp3">pic-3</div></a>
-						<a href="#"><img id="img4" src="photos/set_1/4.jpg" alt="image13"><div id="desp4">pic-4</div></a>
-				</div>
-				<nav>	
-						<span class="dg-prev">&lt;</span>
-						<span class="dg-next">&gt;</span>
-				</nav>
-		</section>
-  </div>
+<div class="hidden">
+					<script type="text/javascript">
+						<!--//--><![CDATA[//><!--
+							var images = new Array()
+							function preload() {
+								for (i = 0; i < preload.arguments.length; i++) {
+									images[i] = new Image()
+									images[i].src = preload.arguments[i]
+								}
+							}
+							preload(
+								"photos/set_1/1.jpg",
+								"photos/set_1/2.jpg",
+								"photos/set_1/3.jpg",
+								"photos/set_1/4.jpg",
+								"photos/set_2/1.jpg",
+								"photos/set_2/2.jpg",
+								"photos/set_2/3.jpg",
+								"photos/set_2/4.jpg",
+								"photos/set_3/1.jpg",
+								"photos/set_3/2.jpg",
+								"photos/set_3/3.jpg",
+								"photos/set_3/4.jpg",
+								"photos/set_4/1.jpg",
+								"photos/set_4/2.jpg",
+								"photos/set_4/3.jpg",
+								"photos/set_4/4.jpg"
+							)
+						//--><!]]>
+					</script>
+</div>
 				
-  <div id="container" class="cf">
-				<section class="slider">
-					<div class="flexslider carousel">
-						<ul class="slides">
-							<li>
-								<a class="set1" href="#"><img src="photos/set_1/1.jpg" /></a>
-							</li>
-							<li>
-								<a class="set2" href="#"><img src="photos/set_2/1.jpg" /></a>
-							</li>
-							<li>
-								<a class="set3" href="#"><img src="photos/set_3/1.jpg" /></a>
-							</li>
-							<li>
-								<a class="set4" href="#"><img src="photos/set_4/1.jpg" /></a>
-							</li>
-							<li>
-								<a class="set1" href="#"><img src="photos/set_1/2.jpg" /></a>
-							</li>
-							<li>
-								<a class="set2" href="#"><img src="photos/set_2/2.jpg" /></a>
-							</li>
-							<li>
-								<a class="set3" href="#"><img src="photos/set_3/2.jpg" /></a>
-							</li>
-							<li>
-								<a class="set4" href="#"><img src="photos/set_4/2.jpg" /></a>
-							</li>
-							<li>
-								<a class="set1" href="#"><img src="photos/set_1/3.jpg" /></a>
-							</li>
-							<li>
-								<a class="set2" href="#"><img src="photos/set_2/3.jpg" /></a>
-							</li>
-							<li>
-								<a class="set3" href="#"><img src="photos/set_3/3.jpg" /></a>
-							</li>
-							<li>
-								<a class="set4" href="#"><img src="photos/set_4/3.jpg" /></a>
-							</li>
-						</ul>
-					</div>
-				</section>
-  </div>
+<div class="container">
+    <h3 style="opacity: 0; margin-left: 200px;" class="flying-text active-text">I believe</h3>
+    <h3 style="opacity: 0; margin-left: -300px;" class="flying-text">我相信</h3>    
+    <h3 style="opacity: 0; margin-left: 200px;" class="flying-text">CSY</h3>
+		<h3 style="opacity: 0; margin-left: -300px;" class="flying-text">陈诗芸</h3>
+		<h3 style="opacity: 0; margin-left: 200px;" class="flying-text">will finally</h3>
+		<h3 style="opacity: 0; margin-left: 350px;" class="flying-text">最终</h3>
+		<h3 style="opacity: 0; margin-left: -100px;" class="flying-text">be</h3>
+		<h3 style="opacity: 0; margin-left: 350px;" class="flying-text">会成为</h3>
+		<h3 style="opacity: 0; margin-left: -200px;" class="flying-text">my wife</h3>
+		<h3 style="opacity: 0; margin-left: -200px;" class="flying-text">相相的老婆！</h3>
+		<h3 style="opacity: 0; margin-left: 350px;" class="flying-text">Happy Magpie Day!</h3>
+		<h3 style="opacity: 0; margin-left: 350px;" class="flying-text">老婆七夕节快乐~</h3>
+</div>
 
-  <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
-
-  <!-- FlexSlider -->
-  <script defer src="js/jquery.flexslider.js"></script>
-	
-	<script type="text/javascript" src="js/jquery.gallery.js"></script>
-  <script type="text/javascript">
-		$(function() {
-				$('#dg-container').gallery();
-			});
-		
-		$(document).ready(function(){
-			var p = "";
-			p = "set_1";
-			setPath();
-				
-			function setPath() {
-				$.get("subscript/" + p + ".html", function(data, status) {
-					//alert("Data: " + jQuery(data).text() + "Status: " + status);
-					var data = jQuery(data).text();
-					var s = data.split('\n');
-					
-					$('#desp1').html(s[1]);
-					$('#desp2').html(s[2]);
-					$('#desp3').html(s[3]);
-					$('#desp4').html(s[4]);
-				});
-				
-				$("#img1").attr("src","photos/" + p + "/1.jpg");
-				$("#img2").attr("src","photos/" + p + "/2.jpg");
-				$("#img3").attr("src","photos/" + p + "/3.jpg");
-				$("#img4").attr("src","photos/" + p + "/4.jpg");
-			}
-			
-			$(".set1").click(function(){
-				p = "set_1";
-				setPath();
-			});
-			
-			$(".set2").click(function(){
-				p = "set_2";
-				setPath();
-			});
-			
-			$(".set3").click(function(){
-				p = "set_3";
-				setPath();
-			});
-			
-			$(".set4").click(function(){
-				p = "set_4";
-				setPath();
-			});
-		});
-			
-    (function() {
-
-      // store the slider in a local variable
-      var $window = $(window),
-          flexslider;
-
-      // tiny helper function to add breakpoints
-      function getGridSize() {
-        return (window.innerWidth < 600) ? 2 :
-               (window.innerWidth < 900) ? 3 : 4;
-      }
-
-      $(function() {
-        SyntaxHighlighter.all();
-      });
-
-      $window.load(function() {
-        $('.flexslider').flexslider({
-          animation: "slide",
-          animationSpeed: 400,
-          animationLoop: false,
-          itemWidth: 210,
-          itemMargin: 5,
-          minItems: getGridSize(), // use function to pull in initial value
-          maxItems: getGridSize(), // use function to pull in initial value
-          start: function(slider){
-            $('body').removeClass('loading');
-            flexslider = slider;
-          }
-        });
-      });
-
-      // check grid size on resize event
-      $window.resize(function() {
-        var gridSize = getGridSize();
-
-        flexslider.vars.minItems = gridSize;
-        flexslider.vars.maxItems = gridSize;
-      });
-    }());
-  </script>
-</body>
-
-</html>
+</body></html>
