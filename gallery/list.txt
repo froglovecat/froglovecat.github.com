@@ -1,1 +1,1 @@
-[{"comment": "just dummy", "id": "2014-12-31 10.50.20.jpg"}]
+[{"comment": "Please add comments!", "id": "2014-12-30 16.47.35.jpg"}, {"comment": "Please add comments!", "id": "2014-12-31 10.44.27.jpg"}, {"comment": "Please add comments!", "id": "2014-12-31 10.50.20.jpg"}]
